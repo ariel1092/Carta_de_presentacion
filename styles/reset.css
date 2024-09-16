@@ -1,0 +1,55 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Eliminar el estilo de lista predeterminado */
+ul, ol {
+    list-style: none;
+}
+
+/* Eliminar el subrayado de los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Establecer el estilo base de los textos */
+body {
+    font-family:sans-serif;
+    line-height: 1.6;
+}
+
+/* Eliminar el borde y el relleno predeterminado de las tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Eliminar el estilo de los botones */
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Establecer el estilo base de los campos de formulario */
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Eliminar el borde predeterminado de los campos de formulario */
+input, textarea {
+    border: none;
+    outline: none;
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Presentación Personal</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <script defer src="scripts/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ariel Morales</h1>
+    </header> 
+    <section id="about-me">
+        <h2>Sobre Mí</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, alias nemo! Porro, hic, repellendus perferendis nisi nihil id atque dolore, consectetur assumenda itaque consequuntur omnis reiciendis! Voluptatum perferendis nostrum soluta?</p>
+    </section>
+
+    <section id="favorite-languages">
+        <h2>Lenguajes de Programación Favoritos</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>JavaScript</h3>
+                <img src="images/javascript.jpeg" alt="JavaScript">
+                <p>Lenguaje dinámico para la web, utilizado en frontend y backend.</p>
+            </div>
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <img src="images/htmlycss.jpeg" alt="HTML & CSS">
+                <p>Fundamentales para el diseño y estructura de páginas web.</p>
+            </div>
+            <div class="card">
+                <h3>Node Js</h3>
+                <img src="images/node2.jpeg" alt="Node Js">
+                <p>Entorno de ejecución para JavaScript en el servidor.</p>
+            </div>
+            <div class="card">
+                <h3>React Js</h3>
+                <img src="images/reactjs.jpeg" alt="React Js">
+                <p>Librería de JavaScript para construir interfaces de usuario.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="daily-activities">
+        <h2>Agrega tus actividades diarias</h2>
+        <form id="activity-form">
+            <label for="title">Título de la actividad:</label>
+            <input type="text" id="title" name="title" required maxlength="15" required>
+
+            <label for="description">Descripción de la actividad:</label>
+            <textarea id="description" name="description" rows="4" required required maxlength="50"></textarea>
+
+            <label for="activity-image">Sube una imagen que represente la actividad:</label>
+            <input type="file" id="activity-image" name="activity-image" accept="image/*" required>
+
+            <button type="submit">Agregar Actividad</button>
+        </form>
+
+        <!-- Contenedor para mostrar las tarjetas de actividades -->
+        <div id="activities-container"></div>
+    </section>
+</body>
+</html>
