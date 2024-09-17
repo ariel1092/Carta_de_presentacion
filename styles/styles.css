@@ -25,14 +25,28 @@ h1 {
 
 
 h2 {
-    color: #333; /* Color gris oscuro para un buen contraste y legibilidad */
-    font-weight: 700; /* Mayor énfasis y destaque */
-    font-style: normal; /* Normaliza el estilo para mejorar la legibilidad */
-    font-size: 28px; /* Tamaño adecuado para destacar pero no dominar */
-    margin-top: 20px; /* Espacio arriba para separación visual */
-    margin-bottom: 10px; /* Espacio abajo para separación con otros elementos */
-    text-align: center; /* Alinea el texto al centro para uniformidad en la sección */
-    font-family: 'Merriweather', serif; /* Consistencia con la fuente del título principal */
+    display: inline; /* Ajusta el ancho del fondo al texto */
+    color: #333; /* Color del texto */
+    font-weight: 700; /* Peso de la fuente */
+    font-size: 28px; /* Tamaño de la fuente */
+    margin-top: 20px; /* Espacio arriba */
+    margin-bottom: 10px; /* Espacio abajo */
+    text-align: center; /* Alineación del texto */
+    font-family: 'Merriweather', serif; /* Fuente */
+
+    /* Subrayado con fondo */
+    position: relative; /* Necesario para posicionar el fondo */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+}
+
+h2::after {
+    content: ''; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento en relación al h2 */
+    left: 0; /* Alinea a la izquierda */
+    bottom: 0; /* Coloca la línea al fondo */
+    width: 100%; /* Ancho igual al del texto */
+    height: 3px; /* Grosor de la línea */
+    background-color: #aaaaaa82; /* Color de la línea */
 }
 
 
@@ -47,9 +61,7 @@ h3 {
 p {
     color: #3f382e;
     text-align: center;
- 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 section {
@@ -61,7 +73,18 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 section p {
-    text-align: justify;
+    color: #4a4a4a; /* Color del texto, gris oscuro para una buena legibilidad */
+    font-size: 18px; /* Tamaño de fuente cómodo para lectura */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    margin: 20px 0; /* Espacio arriba y abajo del párrafo */
+    padding: 10px; /* Espacio interno para evitar que el texto toque los bordes */
+    border-left: 5px solid #ff6347; /* Línea vertical a la izquierda para énfasis */
+    background-color: #f9f9f9; /* Fondo ligeramente gris para resaltar el texto */ /* Bordes redondeados para un aspecto más suave */
+    font-family: 'Merriweather', serif; /* Fuente serif para elegancia y legibilidad */
+    /* Ancho máximo para evitar líneas demasiado largas */
+    text-align: justify; /* Justifica el texto para una presentación ordenada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    
 }
 
 .cards-container {
