@@ -11,11 +11,11 @@ class Repository {
     constructor() {
         this.activities = [];
     }
-
+    //funcion que devuelve todas las actividades
     getAllActivities() {
         return this.activities;
     }
-
+    //funcion para crear una actividad
     createActivity(id, title, description, imgUrl) {
         if (!title || !description) {
             alert('El título y la descripción son obligatorios');
@@ -24,7 +24,7 @@ class Repository {
         const newActivity = new Activity(id, title, description, imgUrl);
         this.activities.push(newActivity);
     }
-
+    //funcion para borrar una actividad
     deleteActivity(id) {
         this.activities = this.activities.filter((act) => act.id !== id);
     }
@@ -55,10 +55,20 @@ function createActivityHTML(activity) {
     imgElement.src = imgUrl;
     imgElement.alt = title;
 
+    //Crear boton para eliminar
+    const deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'Eliminar';
+
+    deleteBtn.addEventListener('click', function(){
+        repository.deleteActivity(id)
+        cardDiv.remove()
+    })
+
     // Agregar los elementos al contenedor de la tarjeta
     cardDiv.appendChild(titleElement);
     cardDiv.appendChild(imgElement);
     cardDiv.appendChild(descriptionElement);
+    cardDiv.appendChild(deleteBtn)
 
     // Devolver el contenedor con todos los elementos
     return cardDiv;
@@ -66,15 +76,15 @@ function createActivityHTML(activity) {
 
 // Manejar el envío del formulario
 document.getElementById('activity-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevenir el comportamiento por defecto
+    event.preventDefault(); // Prevenir que la pagina se recargue
 
     // Obtener los valores del formulario
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
-    const imageInput = document.getElementById('activity-image').files[0];
+    const imageInput = document.getElementById('activity-image').value;
 
     // Generar una URL para la imagen subida
-    const imgUrl = URL.createObjectURL(imageInput);
+    const imgUrl = imageInput
 
     // Crear una nueva instancia de Activity y agregarla al repositorio
     const newActivity = new Activity(Date.now(), title, description, imgUrl);

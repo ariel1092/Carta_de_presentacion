@@ -53,13 +53,13 @@
         <h2>Agrega tus actividades diarias</h2>
         <form id="activity-form">
             <label for="title">Título de la actividad:</label>
-            <input type="text" id="title" name="title" required maxlength="15" required>
+            <input type="text" id="title" name="title" required maxlength="30" required>
 
             <label for="description">Descripción de la actividad:</label>
             <textarea id="description" name="description" rows="4" required required maxlength="50"></textarea>
 
             <label for="activity-image">Sube una imagen que represente la actividad:</label>
-            <input type="file" id="activity-image" name="activity-image" accept="image/*" required>
+            <input type="text" id="activity-image" name="activity-image">
 
             <button type="submit">Agregar Actividad</button>
         </form>
